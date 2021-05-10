@@ -20,3 +20,11 @@ console.log(date.getFullYear())
 console.log(date.getMonth())
 console.log(date.getMinutes())
 console.log(date.getSeconds())
+
+//Short hand of logical operetors
+var Name = ""
+var fullname = Name || "Alamin"
+console.log(fullname)
+
+var isOk = true
+isOk && console.log('Everything is ok')
