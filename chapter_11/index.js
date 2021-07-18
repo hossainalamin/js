@@ -3,6 +3,7 @@ var obj = {
     width : 40,
     draw : function(){
         console.log("Im a rectecgle")
+        this.printrect()
     },
     printrect : function(){
         console.log("My length is "+this.length)
