@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of programming</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        a += 5;
+        let b = 20;
+        const c = 36
+        
+        var d = b%c;
+    
+        if(a > b && d==0){
+            document.write('Good morning');
+        }else if(a < b && d ==1){
+            document.write('Good afternoon');
+        }else{
+            document.write('Hello<br>');
+        }
+        var statement = (a < b && d == 20)?"Good night":"Sorry worng";
+        document.write(statement);
+
+        var number = 20;
+        switch(number){
+            case 1 : 
+                document.write('This is number 1');
+            break;
+            case 2 : case 3 :  case 4 :
+                docmunet.write('This is combination of 2,3,4'); 
+            break;
+            default:
+                document.write('<br>This is number 20');
+            break;
+        }
+    </script>
+</body>
+</html>
