@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Basic</title>
+</head>
+<body onscroll="confirm('Are you confirm?')">
+    <script>
+        function myFunction(a,b=10){
+            document.write(a+b);
+        }
+        function subtrack(a,b=10){
+            document.write(b-a);
+        }
+    </script>
+    <button onclick="myFunction(20)">Click Me</button>
+    <button ondblclick="subtrack(20)">Click Me</button>
+    <p onmouseenter="alert('Are you alert')">Don't hover mouse</p>
+    <p onmouseout="alert('Are you alert')">Don't remove the mouse hover</p>
+</body>
+</html>
