@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <Script>
+        var ary = new Array();
+        for(var a = 0; a < 3; a++){
+            ary[a] =  prompt("Enter the value : ");
+            document.write(ary[a] + "<br>");
+        }
+        var arr = [
+            ['Alamin',1,20],
+            ['Rokib',2,21],
+            ['Kanon',3,22],
+        ];
+        document.write("The length of the array is " + arr.length+"<br>");
+        document.write("<table border=1>");
+        for(var a = 0 ; a < arr.length; a++){
+            document.write("<tr>")
+            for(b = 0 ; b < arr[a].length ; b++){
+                document.write("<td>"+ arr[a][b] +"<br>"+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("<table>");
+        var a = [1,2,3];
+        delete a[1];
+        document.write(a)
+        var b = ["Jon","Kanon","Alamin"];
+        b.sort();
+        document.write(b + "<br>");
+        b.reverse();
+        document.write(b + "<br>");
+        var c = a.concat(b,arr);
+        document.write(c + "<br>");
+        var d = c.join(" ");//string
+        document.write(d);
+
+    </Script>
+</body>
+</html>
