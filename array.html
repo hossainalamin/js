@@ -39,8 +39,21 @@
         var c = a.concat(b,arr);
         document.write(c + "<br>");
         var d = c.join(" ");//string
-        document.write(d);
-
+        document.write(d+"<br>");
+        var car = ['ferrari','volvo','toyota','BMW'];
+        var car1 = car.slice(1,3);
+        document.write(car1+"<br>");
+        var car2 = car.slice(-3,-2);
+        document.write(car2 + "<br>");
+        car.splice(2,0,"lemborgini","Kia","Audi");
+        document.write(car+ "<br>");
+        car.splice(2,1,"Vugati");
+        document.write(car + "<br>");
+        var check = Array.isArray(car);
+        document.write(check + "<br>");
+        var index = car.indexOf("ferrari");
+        document.write(index + "<br>");
+        document.write(car.lastIndexOf('BMW'));//case sensetive
     </Script>
 </body>
 </html>
