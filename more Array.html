@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var car = ["bmw","toyota","ferrari"];
+        var a = car.includes("bmw");
+        document.write(a + "<br>");
+        var ages = [10,13,20,40];
+        var i = 0;
+        for(var a = 0; a < ages.length ; a++){
+            if(ages[a] >= 18){
+                var check = ages[a];
+                var store = [];
+                store[i] = check;
+                document.write(store[i] + "<br>");
+                i++;
+                document.write(typeof(store) + "<br>");
+            }
+        }
+        var b = ages.filter(checkAges);
+        function checkAges(ages){
+            if(ages >= 18){
+                return ages;
+            }
+        }
+        document.write(b + "<br>");
+        ages.forEach(function(value,index){
+            document.write(index + ":" +value + "<br>");
+        });
+    </script>
+</body>
+</html>
