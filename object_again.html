@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var identity = {
+            fname : "Md Alamin",
+            lname : "Hossain",
+            age : "20",
+            fav_movie : ["Shamol chaya","Zindedi na milegi dhoobara","Life is beatifu"],
+            location : {
+                city : "Dhaka",
+                country : "bangladesh"
+            },
+            salary : function(){
+                return 25000;
+            },
+            name : function(){
+                return this.fname + " " + this.lname;
+            }
+        };
+        document.write(identity.age + "<br>");
+        document.write(identity.fav_movie[0] + "<br>");
+        document.write(identity.location.country + "<br>");
+        document.write(identity.salary() + "<br>");
+        document.write(identity.name()+"<br>");
+        
+        var person = new Object();
+        person.name = "Alamin";
+        document.write(person['name'] + "<br>");//not popular
+
+        const info = ['Rokib',20,'Dhaka'];
+        info[0] = "Alamin"//constant variable single value can be changed but not whole variable 
+        document.write(info + "<br>")
+
+        const info_1 = {
+            name : "Kanon",
+            Age : 21,
+            country : "bd"
+        }
+        info_1.name = "yeasin"
+        document.write(info_1.name +"<br>");
+        for(var key in info_1){
+            document.write(key + " : " + info_1[key] + "<br>");
+        }
+
+    </script>
+</body>
+</html>
