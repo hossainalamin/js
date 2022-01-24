@@ -22,7 +22,10 @@ document.querySelector('#table').addEventListener('mouseleave',abc);
 function abc(){
     document.getElementById('table').classList.add("bg-danger");
 }
-document.getElementById("table").addEventListener('click',xyz);
-function xyz(){
-    document.getElementById('table').removeEventListener('mouseleave',abc);
-}
+// document.getElementById("table").addEventListener('click',xyz);
+// function xyz(){
+//     document.getElementById('table').removeEventListener('mouseleave',abc);
+// }
+document.querySelector('.table').addEventListener('click',function(){
+    this.classList.toggle('bg-danger');
+});
