@@ -25,3 +25,14 @@ insertElement.appendChild(insertText);
 // document.querySelector('#header').appendChild(insertElement)
 var target = document.getElementById("header")
 target.insertBefore(insertElement,target.childNodes[0]);
+function abc(){
+    var target = document.querySelector('#para');
+    var element = "<p>The extra paragraph shown by the click of see more button using js.Js is awesome.I am loving js for the event</p>";
+    return target.insertAdjacentHTML('beforeend',element)
+}
+// document.querySelector("#para").addEventListener('mouseout',function(){
+//     var element = document.createElement("p")
+//     var text = document.createTextNode("More more more more and more js")
+//     element.appendChild(text);
+//     this.insertAdjacentElement('beforeend',element);
+// })
