@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <label for="first name">First Name</label>
+    <input type="text" name="fname" id="fname" placeholder="Enter your first name" onfocus="formFocus(this)"><br><br>
+    <label for="last name">Last Name</label>
+    <input type="text" name="lname" id="lname" placeholder="Enter your last name" onfocus="formFocus(this)">
+    <hr>
+    <br>
+    <div id="input">
+
+    </div>
+    <script>
+        function formFocus(element){
+            element.style.background = "lime"
+        }
+        document.getElementById("fname").addEventListener('blur',function(){
+            this.style.background = ""
+        })
+        document.getElementById("lname").addEventListener('blur',function(){
+            this.style.background = ""
+        })
+        document.getElementById('fname').addEventListener('input',function(){
+            var x = this.value;
+            document.getElementById("input").innerHTML = x;
+        })
+        document.getElementById('lname').addEventListener('input',function(){
+            var x = this.value;
+            document.getElementById("input").innerHTML = x;
+        })
+    </script>
+</body>
+</html>
