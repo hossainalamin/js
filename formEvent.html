@@ -7,10 +7,14 @@
     <title>Form Event</title>
 </head>
 <body>
+    <form action="" onsubmit="submitFunction()">
     <label for="first name">First Name</label>
-    <input type="text" name="fname" id="fname" placeholder="Enter your first name" onfocus="formFocus(this)"><br><br>
+    <input type="text" name="fname" id="fname" placeholder="Enter your first name" onfocus="formFocus(this)" onselect="alert('You are selected some this')"><br><br>
     <label for="last name">Last Name</label>
-    <input type="text" name="lname" id="lname" placeholder="Enter your last name" onfocus="formFocus(this)">
+    <input type="text" name="lname" id="lname" placeholder="Enter your last name" onfocus="formFocus(this)" onchange="formInputChange(this)" oninvalid="alert('last name is required')" required>
+    <br>
+    <input type="submit" value="Submit">
+    </form>
     <hr>
     <br>
     <div id="input">
@@ -30,10 +34,18 @@
             var x = this.value;
             document.getElementById("input").innerHTML = x;
         })
-        document.getElementById('lname').addEventListener('input',function(){
-            var x = this.value;
-            document.getElementById("input").innerHTML = x;
-        })
+        // document.getElementById('lname').addEventListener('input',function(){
+        //     var x = this.value;
+        //     document.getElementById("input").innerHTML = x;
+        // })
+        function formInputChange(element){
+            var x = element.value;
+            document.getElementById('input').innerHTML = x;
+        }
+        function submitFunction(){
+            var x = document.getElementById('fname').value;
+            alert("hello " +x)
+        }
     </script>
 </body>
 </html>
